@@ -16,7 +16,7 @@ var jumpSound , checkPointSound, dieSound
 
 function preload(){
   boy_running = loadAnimation("Run (1).png","Run (2).png","Run (3).png","Run (4).png","Run (5).png","Run (6).png","Run (7).png","Run (8).png");
-  boy_collided = loadAnimation("Dead (1).png","Dead (2).png","Dead (3).png","Dead (4).png","Dead (5).png","Dead (6).png","Dead (7).png","Dead (8).png","Dead (9).png","Dead (10).png",);
+  boy_collided = loadAnimation("Dead (10).png",);
   
   groundImage = loadImage("ground2.png");
   
@@ -140,7 +140,7 @@ function draw() {
      
      //change the boy animation
       boy.changeAnimation("collided", boy_collided);
-     gameState = "over"
+     
 
      
      
@@ -163,9 +163,7 @@ function draw() {
   if(mousePressedOver(restart)) {
       reset();
     }
-    if(gameState === "over"){
-      boy.changeImage(overImage)
-    }
+  
 
   drawSprites();
 }
